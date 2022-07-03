@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Counter App</h1>
+      <h1>Counter App With Redux</h1>
       <hr />
       <Container count={count} />
       <Form

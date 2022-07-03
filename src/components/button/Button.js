@@ -1,11 +1,15 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { increaseCount, decreaseCount, reset } from "./counterSlice";
 
-export const Button = ({ increaseCount, decreaseCount, reset }) => {
+export const Button = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
-      <button onClick={increaseCount}>Increment</button> {""}
-      <button onClick={reset}>Reset</button> {""}
-      <button onClick={decreaseCount}>Decrement</button>
+      <button onClick={() => dispatch(increaseCount())}>Increment</button> {""}
+      <button onClick={() => dispatch(reset())}>Reset</button> {""}
+      <button onClick={() => dispatch(decreaseCount())}>Decrement</button>
     </>
   );
 };

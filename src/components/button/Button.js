@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Button = () => {
+export const Button = ({ increaseCount }) => {
   return (
     <>
-      <button>Increment</button> {""}
+      <button increaseCount={increaseCount}>Increment</button> {""}
       <button>Decrement</button>
     </>
   );

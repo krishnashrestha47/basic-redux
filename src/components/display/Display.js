@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Display = () => {
-  return <h1>0</h1>;
+export const Display = ({ count }) => {
+  return <h1>{count}</h1>;
 };

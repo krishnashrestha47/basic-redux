@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "../button/Button";
 
-export const Form = ({ increaseCount }) => {
+export const Form = (props) => {
   return (
     <div>
-      <Button increaseCount={increaseCount} />
+      <Button {...props} />
     </div>
   );
 };

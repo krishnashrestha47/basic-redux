@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Button = ({ increaseCount }) => {
+export const Button = ({ increaseCount, decreaseCount }) => {
   return (
     <>
-      <button increaseCount={increaseCount}>Increment</button> {""}
-      <button>Decrement</button>
+      <button onClick={increaseCount}>Increment</button> {""}
+      <button onClick={decreaseCount}>Decrement</button>
     </>
   );
 };

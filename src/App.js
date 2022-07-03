@@ -4,10 +4,14 @@ import { Form } from "./components/form/Form";
 import { Container } from "./components/tableContainer/Container";
 
 const App = () => {
-  const [count, setCount] = useState(100);
+  const [count, setCount] = useState(0);
 
   const increaseCount = () => {
     setCount(count + 1);
+  };
+
+  const decreaseCount = () => {
+    setCount(count - 1);
   };
 
   return (
@@ -15,7 +19,7 @@ const App = () => {
       <h1>Counter App</h1>
       <hr />
       <Container count={count} />
-      <Form increaseCount={increaseCount} />
+      <Form decreaseCount={decreaseCount} increaseCount={increaseCount} />
     </div>
   );
 };

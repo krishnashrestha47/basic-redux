@@ -14,12 +14,20 @@ const App = () => {
     setCount(count - 1);
   };
 
+  const reset = () => {
+    setCount(0);
+  };
+
   return (
     <div className="container">
       <h1>Counter App</h1>
       <hr />
       <Container count={count} />
-      <Form decreaseCount={decreaseCount} increaseCount={increaseCount} />
+      <Form
+        reset={reset}
+        decreaseCount={decreaseCount}
+        increaseCount={increaseCount}
+      />
     </div>
   );
 };
